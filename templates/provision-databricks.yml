@@ -1,7 +1,3 @@
-parameters:
-  project: "databricks-automation"
-  workspace: "databricks-poc"
-  dependsOn: []
 
 jobs:
   - job: apply_databricks_scripts
@@ -11,8 +7,6 @@ jobs:
     variables:
       - group: shared
       - group: development
-    ${{ if parameters.dependsOn }}:
-      dependsOn: ${{ parameters.dependsOn }}
     steps:
       - task: UsePythonVersion@0
         inputs:
@@ -37,5 +31,5 @@ jobs:
         inputs:
           workingDirectory: $(Build.SourcesDirectory)/assets/databricks
           scriptPath: $(Build.SourcesDirectory)/assets/databricks/setup.sh
-          args: ${{ parameters.project }}-${{ parameters.workspace }} # TODO: Handle arguments in the script
+          args: databricks-automation-databricks-poc # TODO: Handle arguments in the script
         displayName: Setup Databricks
