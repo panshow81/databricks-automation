@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 CLUSTER_JSON_FILE="./cluster.json"
 INSTANCE_POOL_JSON_FILE="./instance-pool.json"
