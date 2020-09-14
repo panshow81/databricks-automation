@@ -1,6 +1,6 @@
 parameters:
-  project: ""
-  workspace: ""
+  project: "databricks-automation"
+  workspace: "databricks-poc"
   dependsOn: []
 
 jobs:
