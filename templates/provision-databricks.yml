@@ -4,9 +4,6 @@ jobs:
     displayName: Apply Databricks scripts
     pool:
       vmImage: ubuntu-16.04
-    variables:
-      - group: shared
-      - group: development
     steps:
       - task: UsePythonVersion@0
         inputs:
