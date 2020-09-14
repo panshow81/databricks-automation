@@ -26,7 +26,7 @@ jobs:
 
       - task: ShellScript@2
         inputs:
-          workingDirectory: $(Build.SourcesDirectory)/assets/databricks
-          scriptPath: $(Build.SourcesDirectory)/assets/databricks/setup.sh
+          workingDirectory: $(Build.SourcesDirectory)/assets
+          scriptPath: $(Build.SourcesDirectory)/assets/setup.sh
           args: databricks-automation-databricks-poc # TODO: Handle arguments in the script
         displayName: Setup Databricks
