@@ -19,7 +19,7 @@ jobs:
       - bash: |
           cat >~/.databrickscfg <<EOL
           [DEFAULT]
-          host = https://adb-8313415121770558.18.azuredatabricks.net
+          host = https://adb-1355743994872542.2.azuredatabricks.net
           token = $(DATABRICKS_TOKEN)
           EOL
         displayName: Configure Databricks CLI
